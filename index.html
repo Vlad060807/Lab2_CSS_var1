@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каскадні таблиці стилів</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .internal-style {
+            color: darkgreen;
+            background-color: #e2f3e2;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header id="page-header"><h1>Каскадні таблиці стилів</h1></header>
+    <main>
+        <section>
+            <h2>1. Способи підключення CSS</h2>
+            <p style="color: darkred; background-color: #ffe4e4; padding: 12px;">
+                Цей абзац оформлено через атрибут style.
+            </p>
+            <p class="internal-style">Цей абзац оформлено через блок style у секції head.</p>
+            <p class="external-style">Цей абзац оформлено через зовнішній файл style.css.
+                <span class="highlight">Це рядковий елемент span.</span>
+            </p>
+        </section>
+        <section>
+            <h2>2. Позиціонування елементів</h2>
+            <div class="position-container">
+                Батьківський блок має position: relative.
+                <span class="position-label">position: absolute</span>
+            </div>
+        </section>
+        <section>
+            <h2>3. Обтікання елемента за допомогою float</h2>
+            <div class="float-container">
+                <div class="float-box">CSS</div>
+                <p>Жовтий блок розташований ліворуч завдяки властивості float: left.
+                    Текст обтікає його справа. Якщо звузити вікно браузера, рядки,
+                    що опиняться нижче блока, займуть усю доступну ширину.</p>
+            </div>
+        </section>
+        <section>
+            <h2>4. Прапорці зі зміною оформлення</h2>
+            <fieldset>
+                <legend>Які теми ти опрацював? Можна вибрати кілька.</legend>
+                <label><input type="checkbox" name="topic" value="selectors"> <span>Селектори</span></label>
+                <label><input type="checkbox" name="topic" value="position"> <span>Позиціонування</span></label>
+                <label><input type="checkbox" name="topic" value="flexbox"> <span>Flexbox</span></label>
+            </fieldset>
+        </section>
+        <section>
+            <h2>5. Розташування елементів за допомогою Flexbox</h2>
+            <div class="flex-container">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item wide">8</div>
+                <div class="item full-row">9</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

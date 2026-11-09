@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #fff4d6;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+#page-header { text-align: center; }
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 24px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+h2 { margin: 0 0 16px; font-size: 22px; }
+p { line-height: 1.6; }
+
+.external-style {
+    padding: 12px;
+    color: #173b86;
+    background-color: #e8efff;
+}
+
+.highlight { font-weight: bold; text-decoration: underline; }
+
+.position-container {
+    position: relative;
+    min-height: 130px;
+    padding: 15px;
+    border: 2px dashed #5272a3;
+    background-color: #f0f5ff;
+}
+
+.position-label {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 10px;
+    color: white;
+    background-color: #365b96;
+}
+
+.float-container { display: flow-root; }
+.float-container p { margin: 0; }
+
+.float-box {
+    float: left;
+    margin: 0 18px 6px 0;
+    padding: 22px;
+    font-weight: bold;
+    background-color: #fc6;
+}
+
+fieldset { margin: 0; padding: 0; border: 0; }
+legend { margin-bottom: 8px; }
+label { display: inline-block; margin: 4px 10px 4px 0; cursor: pointer; }
+
+label span {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #eee;
+}
+
+/* Зміна фону підпису лише біля позначеного прапорця. */
+input[type="checkbox"]:checked + span {
+    color: white;
+    background-color: #246b35;
+    border-color: #246b35;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 2%;
+    max-width: 574px;
+}
+
+.item {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 82px;
+    background-color: #ffcc00;
+    color: black;
+    font: 18px "Times New Roman", serif;
+}
+
+.item:first-child, .full-row { background-color: limegreen; }
+.wide { flex-grow: 1.4; }
+
+/* Ширина дев'ятого блока змушує його перейти на окремий рядок. */
+.full-row { flex-basis: 100%; }
